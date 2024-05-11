@@ -5,7 +5,7 @@ export const refreshSlice = api.injectEndpoints({
    endpoints: (builder) => ({ 
       refresh: builder.mutation<IAuthResponse, void>({
          query: () => ({
-            url: "/api/user/refresh",
+            url: "/api/v1/user/refresh",
             method: "POST",
          }),
       }),

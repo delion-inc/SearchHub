@@ -7,9 +7,10 @@ import { UseFormReturn, useForm } from "react-hook-form";
 import RegistrationForm from "./RegistrationForm";
 import { useRegisterMutation } from "@/api";
 import { z } from "zod";
-import { toast } from "sonner";
+import { Toaster, toast } from "sonner";
 import { ButtonLoading } from "./ButtonLoading";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { setCredentials, useAppDispatch } from "@/app/redux";
 
 const Register = () => {
    const form: UseFormReturn<RegisterFormData> = useForm<RegisterFormData>({
@@ -25,14 +26,17 @@ const Register = () => {
    });
 
    const [register, {isLoading}] = useRegisterMutation();
-   // const dispatch = useAppDispatch();
+   const navigate = useNavigate();
+   const dispatch = useAppDispatch();
 
    async function onSubmit(data: z.infer<typeof RegisterSchema>) {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { confirmPassword, ...dataToSend } = data;
       try {
-         await register(dataToSend as Partial<RegisterFormData>).unwrap();
+         const userData = await register(dataToSend as Partial<RegisterFormData>).unwrap();
          toast("Реєстрація виконана успішно"); 
+         dispatch(setCredentials({ ...userData }));
+         navigate("/"); 
          // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
          if (!err?.originalStatus) {
@@ -74,6 +78,7 @@ const Register = () => {
                </Button>
             </CardFooter>
          </Card>
+         <Toaster />
       </div>
    );
 };

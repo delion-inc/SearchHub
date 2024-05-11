@@ -1,15 +1,14 @@
 import { Button } from "@/app/styles/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/app/styles/ui/card";
-import { LoginFormData, RegisterFormData } from "@/types/auth.interface";
-import { LoginSchema, RegisterSchema } from "@/utils/schema";
+import { LoginFormData } from "@/types/auth.interface";
+import { LoginSchema  } from "@/utils/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { UseFormReturn, useForm } from "react-hook-form";
-import RegistrationForm from "./RegistrationForm";
-import { useLoginMutation, useRegisterMutation } from "@/api";
+import { useLoginMutation } from "@/api";
 import { z } from "zod";
 import { toast } from "sonner";
 import { ButtonLoading } from "./ButtonLoading";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { setCredentials, useAppDispatch } from "@/app/redux";
 import LoginForm from "./LoginForm";
 
@@ -24,11 +23,13 @@ const Login = () => {
 
    const [login, {isLoading}] = useLoginMutation();
    const dispatch = useAppDispatch();
+   const navigate = useNavigate();
 
    async function onSubmit(data: z.infer<typeof LoginSchema>) {
       try {
          const userData = await login(data).unwrap();
          dispatch(setCredentials({ ...userData }));
+         navigate("/");
          // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
          if (!err?.originalStatus) {
