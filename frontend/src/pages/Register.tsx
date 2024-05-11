@@ -52,8 +52,8 @@ const Register = () => {
    }
 
    return (
-      <div className="m-auto py-20">
-         <Card className="bg-custom max-w-2xl m-auto">
+      <div className="m-auto py-[100px]">
+         <Card className="bg-custom max-w-2xl m-auto mt-5">
             <CardHeader>
                <CardTitle>Реєстрація</CardTitle>
                <CardDescription>Зареєструйтесь на сайті, щоб мати змогу переглядати оголошення про зниклих безвісти та робити запити.</CardDescription>

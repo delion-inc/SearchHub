@@ -4,8 +4,8 @@ import Home from "@/pages/Home";
 import PersistLogin from "@/utils/auth/PersistLogin";
 import Hero from "@/components/Hero";
 import RequireAuth from "@/utils/auth/RequireAuth";
-import Login from "@/components/Login";
-import Register from "@/components/Register";
+import Login from "@/pages/Login";
+import Register from "@/pages/Register";
 
 enum Role {
    User = 2001, 
