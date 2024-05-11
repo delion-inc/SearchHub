@@ -38,8 +38,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeRequests ->
                         authorizeRequests
                                 .requestMatchers("/api/v1/user/registration", "/api/v1/user/authorization").permitAll()
-                                .requestMatchers("/api/v1/user/**").hasAnyRole("HELPER", "RECIPIENT")
-                                .requestMatchers("/api/v1/request/**").hasAnyRole("HELPER", "RECIPIENT")
+                                .requestMatchers("/api/v1/user/**").hasAnyRole("USER", "ADMIN")
+                                .requestMatchers("/api/v1/request/**").hasAnyRole("USER", "ADMIN")
                 )
                 .sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .exceptionHandling(c -> c.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))

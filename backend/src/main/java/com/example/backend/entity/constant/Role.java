@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Getter
 public enum Role {
-    ROLE_HELPER(2001),
-    ROLE_RECIPIENT(5320);
+    ROLE_USER(2001),
+    ROLE_ADMIN(5320);
     private int value;
 
     public static Role fromValue(int value) {

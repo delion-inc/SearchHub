@@ -20,8 +20,8 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/registration")
-    public ResponseEntity<?> registrationRecipient(@RequestBody User recipient) {
-        return userService.registration(recipient);
+    public ResponseEntity<?> registrationRecipient(@RequestBody User user, HttpServletResponse response) {
+        return userService.registration(user, response);
     }
 
     @PostMapping("/authorization")
