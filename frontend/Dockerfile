@@ -1,9 +1,9 @@
 FROM node:20
 WORKDIR /app
 COPY package.json .
-RUN yarn install
+RUN npm install
 # COPY yarn.lock vite.config.ts tailwind.config.js ./
 COPY . .
-RUN yarn build
+RUN npm run build
 EXPOSE 4173
-CMD ["yarn", "preview"]
+CMD ["npm", "run", "start"]

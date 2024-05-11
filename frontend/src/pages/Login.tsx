@@ -27,8 +27,8 @@ const Login = () => {
 
    async function onSubmit(data: z.infer<typeof LoginSchema>) {
       try {
-         // const userData = await login(data).unwrap();
-         const userData = {accessToken: "1", roles: [2001]}
+         const userData = await login(data).unwrap();
+         // const userData = {accessToken: "1", roles: [2001]}
          dispatch(setCredentials({ ...userData }));
          navigate("/");
          // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -47,7 +47,7 @@ const Login = () => {
 
    return (
       <div className="m-auto py-[100px]">
-         <Card className="bg-custom max-w-2xl m-auto sm:mt-20 mt-10">
+         <Card className="bg-card max-w-2xl m-auto sm:mt-20 mt-10">
             <CardHeader>
                <CardTitle>Вхід</CardTitle>
                <CardDescription>Увійдіть на сайт, щоб мати змогу переглядати оголошення про зниклих безвісти та робити запити.</CardDescription>

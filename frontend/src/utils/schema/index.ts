@@ -37,17 +37,17 @@ export const LoginSchema = z.object({
    password: z.string().min(6, { message: 'Пароль повинен містити щонайменше 8 символів' }),
 });
 
-// export const AddRequestSchema = z.object({
-//    title: z.string().min(5, {
-//       message: "Введіть заголовок"
-//    }),
-//    description: z.string().min(5, {
-//       message: "Введіть опис"
-//    }),
-//    city: z.string().min(3, {
-//       message: "Введіть місто"
-//    }),
-//    priority: z.string().refine(value => value === 'HIGH' || value === 'MEDIUM' || value === 'LOW', {
-//       message: "Будь ласка, визначте пріоритетність"
-//    })
-// })
+export const AddRequestSchema = z.object({
+   name: z.string().min(5, {
+      message: "Введіть заголовок"
+   }),
+   description: z.string().min(5, {
+      message: "Введіть опис"
+   }),
+   city: z.string().min(3, {
+      message: "Введіть місто"
+   }),
+   gender: z.string().min(1, {
+      message: "Оберіть стать"
+   })
+})
