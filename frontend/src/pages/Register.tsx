@@ -4,13 +4,13 @@ import { RegisterFormData } from "@/types/auth.interface";
 import { RegisterSchema } from "@/utils/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { UseFormReturn, useForm } from "react-hook-form";
-import RegistrationForm from "./RegistrationForm";
 import { useRegisterMutation } from "@/api";
 import { z } from "zod";
 import { Toaster, toast } from "sonner";
-import { ButtonLoading } from "./ButtonLoading";
 import { Link, useNavigate } from "react-router-dom";
 import { setCredentials, useAppDispatch } from "@/app/redux";
+import RegistrationForm from "@/components/RegistrationForm";
+import { ButtonLoading } from "@/components/ButtonLoading";
 
 const Register = () => {
    const form: UseFormReturn<RegisterFormData> = useForm<RegisterFormData>({

@@ -7,10 +7,10 @@ import { UseFormReturn, useForm } from "react-hook-form";
 import { useLoginMutation } from "@/api";
 import { z } from "zod";
 import { toast } from "sonner";
-import { ButtonLoading } from "./ButtonLoading";
 import { Link, useNavigate } from "react-router-dom";
 import { setCredentials, useAppDispatch } from "@/app/redux";
-import LoginForm from "./LoginForm";
+import { ButtonLoading } from "@/components/ButtonLoading";
+import LoginForm from "@/components/LoginForm";
 
 const Login = () => {
    const form: UseFormReturn<LoginFormData> = useForm<LoginFormData>({
