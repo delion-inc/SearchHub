@@ -42,11 +42,11 @@ const PersistLogin = () => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, []);
 
-   useEffect(() => {
-      // console.log(`isLoading: ${isLoading}`);
-      // console.log(`aT: ${JSON.stringify(token)}`);
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-   }, [isLoading]);
+   // useEffect(() => {
+   //    // console.log(`isLoading: ${isLoading}`);
+   //    // console.log(`aT: ${JSON.stringify(token)}`);
+   //    // eslint-disable-next-line react-hooks/exhaustive-deps
+   // }, [isLoading]);
    return <>{!persist ? <Outlet /> : isLoading ? <Loader2 color="#176B87" className="absolute top-[45%] left-[49%] h-10 w-10 animate-spin" /> : <Outlet />}</>;
 };
 
