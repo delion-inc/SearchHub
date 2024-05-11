@@ -5,12 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce0e8348-ff2a-47bc-a5d5-31e987fb5049" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/constant/Gender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/implementation/IRequestService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/implementation/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/controller/RequestController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/controller/UserController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/request/AuthRequest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/request/RequestDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO$UserDTOBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request$RequestBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/User.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/constant/Role.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/repository/RequestRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/repository/UserRepository.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/JwtTokenFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/JwtTokenService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/SecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/RequestService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/UserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IRequestService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IUserService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/backend/com/example/backend/BackendApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/controller/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/controller/RequestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/constant/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/constant/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/dto/request/RequestDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/dto/request/RequestDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/JwtTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/JwtTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/JwtTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/JwtTokenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/Impl/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/Impl/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/Impl/IRequestService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/Impl/IUserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/RequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/RequestService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +57,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -66,6 +103,9 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.backend [clean].executor": "Run",
+    "Maven.backend [compile].executor": "Run",
+    "Maven.backend [install].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -86,6 +126,11 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="ReactDesignerToolWindowState">

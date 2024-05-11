@@ -8,7 +8,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface UserService {
-    ResponseEntity<?> registration(User recipient, HttpServletResponse response);
+
+    ResponseEntity<?> registration(User user, HttpServletResponse response);
 
     ResponseEntity<?> authorization(AuthRequest authRequest, HttpServletResponse response);
 

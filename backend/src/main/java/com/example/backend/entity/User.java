@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -44,9 +45,7 @@ public class User {
     @Column(name = "refresh_token")
     private String refreshToken;
 
-    @Column(name = "user_role")
-    private Integer role;
-
     @ElementCollection(fetch = FetchType.EAGER)
     private List<Role> roles = new ArrayList<>();
+
 }

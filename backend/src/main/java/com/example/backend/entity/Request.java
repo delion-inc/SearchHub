@@ -1,5 +1,6 @@
 package com.example.backend.entity;
 
+import com.example.backend.entity.constant.Gender;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,8 +20,8 @@ public class Request {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "title", nullable = false)
-    String title;
+    @Column(name = "name", nullable = false)
+    String name;
 
     @Column(name = "description", nullable = false)
     String description;
@@ -28,8 +29,11 @@ public class Request {
     @Column(name = "created_at", nullable = false)
     String createdAt;
 
-    @Column(name = "city", nullable = false)
-    String city;
+    @Column(name = "gender", nullable = false)
+    Gender gender;
+
+    @Column(name = "location", nullable = false)
+    String location;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
