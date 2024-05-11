@@ -26,6 +26,7 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
+//@EnableMethodSecurity(jsr250Enabled = true)
 public class SecurityConfig {
 
     private final JwtTokenFilter jwtRequestFilter;
@@ -41,10 +42,10 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(c -> c.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(authorizeRequests ->
-                        authorizeRequests
-                                .requestMatchers("/api/v1/request/**").hasAnyRole("USER", "ADMIN")
+                                authorizeRequests
+                                        .requestMatchers("/api/v1/request/**").hasAnyRole("USER", "ADMIN")
 //                                .requestMatchers("/api/v1/request/get/").hasAnyRole("USER", "ADMIN")
-                                .requestMatchers("/api/v1/user/**").permitAll()
+                                        .requestMatchers("/api/v1/user/**").permitAll()
                 )
                 .sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .exceptionHandling(c -> c.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))

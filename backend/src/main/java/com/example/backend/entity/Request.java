@@ -30,6 +30,7 @@ public class Request {
     String createdAt;
 
     @Column(name = "gender", nullable = false)
+    @Enumerated(EnumType.STRING)
     Gender gender;
 
     @Column(name = "location", nullable = false)

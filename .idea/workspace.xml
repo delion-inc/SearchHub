@@ -6,17 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="ce0e8348-ff2a-47bc-a5d5-31e987fb5049" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/dto/response/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/dto/response/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/repository/RequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/repository/RequestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/BackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/BackendApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/implementation/IRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/implementation/IRequestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/controller/RequestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/controller/RequestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO$UserDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO$UserDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/repository/RequestRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/repository/RequestRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/backend/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/backend/entity/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/backend/entity/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/backend/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/backend/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/surefire-reports/TEST-com.example.backend.BackendApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/surefire-reports/TEST-com.example.backend.BackendApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/surefire-reports/com.example.backend.BackendApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/surefire-reports/com.example.backend.BackendApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/RequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/RequestService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IRequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IRequestService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +78,7 @@
     "Maven.backend [clean].executor": "Run",
     "Maven.backend [compile].executor": "Run",
     "Maven.backend [install].executor": "Run",
+    "Maven.backend [package].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
