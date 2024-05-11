@@ -5,7 +5,7 @@ export const registerSlice = api.injectEndpoints({
    endpoints: (builder) => ({
       register: builder.mutation<void, Partial<RegisterFormData>>({
          query: (credentials) => ({
-            url: "/api/user/registration",
+            url: "/api/v1/user/registration",
             method: "POST",
             body: { ...credentials },
          }),
