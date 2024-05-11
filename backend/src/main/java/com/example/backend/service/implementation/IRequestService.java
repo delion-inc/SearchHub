@@ -1,6 +1,8 @@
 package com.example.backend.service.implementation;
 
 import com.example.backend.dto.request.RequestDTO;
+import com.example.backend.dto.response.RequestResponseDTO;
+import com.example.backend.dto.response.UserDTO;
 import com.example.backend.entity.Request;
 import com.example.backend.entity.User;
 import com.example.backend.repository.RequestRepository;
@@ -14,9 +16,8 @@ import org.springframework.stereotype.Service;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
-
-import static com.fasterxml.jackson.datatype.jsr310.deser.JSR310StringParsableDeserializer.ZONE_ID;
 
 @Service
 @RequiredArgsConstructor
@@ -49,12 +50,36 @@ public class IRequestService implements RequestService {
     @Override
     public ResponseEntity<?> getRequestById(Long id) {
         Request request = requestRepository.findById(id).orElse(null);
-        return new ResponseEntity<>(request, HttpStatus.OK);
+        RequestResponseDTO requestResponseDTO = getRequestResponseDTO(request);
+        return new ResponseEntity<>(requestResponseDTO, HttpStatus.OK);
     }
 
     @Override
     public ResponseEntity<?> getAll() {
         List<Request> requests = requestRepository.findAll();
-        return new ResponseEntity<>(requests, HttpStatus.OK);
+        List<RequestResponseDTO> requestResponseDTOList = new ArrayList<>();
+        for (Request request : requests) {
+            RequestResponseDTO requestResponseDTO = getRequestResponseDTO(request);
+            requestResponseDTOList.add(requestResponseDTO);
+        }
+        return new ResponseEntity<>(requestResponseDTOList, HttpStatus.OK);
+    }
+
+    private static RequestResponseDTO getRequestResponseDTO(Request request) {
+        UserDTO userDTO = UserDTO.builder()
+                .email(request.getUser().getEmail())
+                .name(request.getUser().getName())
+                .phone(request.getUser().getPhone())
+                .build();
+        RequestResponseDTO requestResponseDTO = RequestResponseDTO.builder()
+                .id(request.getId())
+                .name(request.getName())
+                .createdAt(request.getCreatedAt())
+                .description(request.getDescription())
+                .gender(request.getGender())
+                .location(request.getLocation())
+                .user(userDTO)
+                .build();
+        return requestResponseDTO;
     }
 }
