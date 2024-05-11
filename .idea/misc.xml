@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
+=======
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+>>>>>>> 496688ba5b527d9a0ecde91c49adacfb98fec655
   <component name="ProjectRootManager" version="2" default="true">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
