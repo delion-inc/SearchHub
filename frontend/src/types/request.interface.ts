@@ -1,7 +1,7 @@
 export interface RequestFormData {
    name: string;
    description: string;
-   city: string;
+   location: string;
    gender: GenderType;
 }
 

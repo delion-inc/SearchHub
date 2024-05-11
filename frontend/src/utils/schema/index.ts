@@ -44,7 +44,7 @@ export const AddRequestSchema = z.object({
    description: z.string().min(5, {
       message: "Введіть опис"
    }),
-   city: z.string().min(3, {
+   location: z.string().min(3, {
       message: "Введіть місто"
    }),
    gender: z.string().min(1, {

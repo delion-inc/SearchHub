@@ -5,7 +5,7 @@ import { AddRequestSchema } from "@/utils/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import AddRequestForm from "./AddRequestForm";
 import { UseFormReturn, useForm } from "react-hook-form";
-import { toast } from "sonner";
+import { toast, Toaster } from "sonner";
 import { z } from "zod";
 import { useAddRequestMutation } from "@/api/endpoints/request.api";
 import { ButtonLoading } from "./ButtonLoading";
@@ -16,7 +16,7 @@ const AddRequestDialog = ({setOpen}: {setOpen: React.Dispatch<React.SetStateActi
       defaultValues: {
          name: "",
          description: "",
-         city: "",
+         location: "",
          gender: "M",
       },
    });
@@ -59,6 +59,7 @@ const AddRequestDialog = ({setOpen}: {setOpen: React.Dispatch<React.SetStateActi
                </Button>
             )} 
          </DialogFooter>
+         <Toaster />
       </DialogContent>
    );
 };

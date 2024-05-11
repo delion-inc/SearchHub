@@ -22,7 +22,7 @@ const AddRequestForm: React.FC<RegisterFormProps> = ({ form, onSubmit }) => {
                   <div>
                      <InputField<RequestFormData>
                         control={form.control}
-                        name="city"
+                        name="location"
                         label="Місто"
                         type="string"
                         placeholder="Орієнтовне місто в якому зникла людина"
