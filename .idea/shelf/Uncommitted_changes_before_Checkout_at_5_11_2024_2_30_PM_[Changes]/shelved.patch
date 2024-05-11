@@ -1,0 +1,174 @@
+Index: backend/target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/target/classes/application.properties b/backend/target/classes/application.properties
+new file mode 100644
+--- /dev/null	(date 1715426798367)
++++ b/backend/target/classes/application.properties	(date 1715426798367)
+@@ -0,0 +1,1 @@
++spring.application.name=backend
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+new file mode 100644
+--- /dev/null	(date 1715427003317)
++++ b/.idea/workspace.xml	(date 1715427003317)
+@@ -0,0 +1,101 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="AutoImportSettings">
++    <option name="autoReloadType" value="SELECTIVE" />
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="4f4e9e74-3541-498f-84a7-6258803a9775" name="Changes" comment="" />
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
++    </option>
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
++  "lastFilter": {
++    "state": "OPEN",
++    "assignee": "Bethakzs"
++  }
++}]]></component>
++  <component name="GithubPullRequestsUISettings"><![CDATA[{
++  "selectedUrlAndAccountId": {
++    "url": "https://github.com/delion-inc/SearchHub.git",
++    "accountId": "f82342fc-28e8-4a25-b990-a5cf7a4fe9e4"
++  }
++}]]></component>
++  <component name="ProjectColorInfo"><![CDATA[{
++  "associatedIndex": 0
++}]]></component>
++  <component name="ProjectId" id="2gJrJXonF80QsyJ9tSTQD9gYceb" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="autoscrollToSource" value="true" />
++    <option name="flattenPackages" value="true" />
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++    <option name="showVisibilityIcons" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RequestMappingsPanelOrder0": "0",
++    "RequestMappingsPanelOrder1": "1",
++    "RequestMappingsPanelWidth0": "75",
++    "RequestMappingsPanelWidth1": "75",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.go.formatter.settings.were.checked": "true",
++    "RunOnceActivity.go.migrated.go.modules.settings": "true",
++    "Spring Boot.BackendApplication.executor": "Run",
++    "go.import.settings.migrated": "true",
++    "kotlin-language-version-configured": "true",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "vue.rearranger.settings.migration": "true"
++  }
++}]]></component>
++  <component name="RunManager">
++    <configuration name="BackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
++      <module name="TryProject" />
++      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.backend.BackendApplication" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
++      </method>
++    </configuration>
++  </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
++        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="4f4e9e74-3541-498f-84a7-6258803a9775" name="Changes" comment="" />
++      <created>1715426449356</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1715426449356</updated>
++      <workItem from="1715426450740" duration="547000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="VgoProject">
++    <settings-migrated>true</settings-migrated>
++  </component>
++</project>
+\ No newline at end of file
+Index: backend/HELP.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/backend/HELP.md b/backend/HELP.md
+new file mode 100644
+--- /dev/null	(date 1715426781576)
++++ b/backend/HELP.md	(date 1715426781576)
+@@ -0,0 +1,23 @@
++# Getting Started
++
++### Reference Documentation
++For further reference, please consider the following sections:
++
++* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
++* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.2.5/maven-plugin/reference/html/)
++* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.2.5/maven-plugin/reference/html/#build-image)
++* [Spring Web](https://docs.spring.io/spring-boot/docs/3.2.5/reference/htmlsingle/index.html#web)
++* [Spring Security](https://docs.spring.io/spring-boot/docs/3.2.5/reference/htmlsingle/index.html#web.security)
++* [Spring Data JDBC](https://docs.spring.io/spring-boot/docs/3.2.5/reference/htmlsingle/index.html#data.sql.jdbc)
++
++### Guides
++The following guides illustrate how to use some features concretely:
++
++* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
++* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
++* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
++* [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
++* [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
++* [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/)
++* [Using Spring Data JDBC](https://github.com/spring-projects/spring-data-examples/tree/master/jdbc/basics)
++
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1715426966915)
++++ b/.idea/misc.xml	(date 1715426966915)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="ProjectRootManager" version="2" default="true">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
