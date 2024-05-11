@@ -14,12 +14,12 @@ module.exports = {
       extend: {
          colors: {
             border: "hsl(var(--border))",
-            input: "#345427",
-            ring: "#345427",
-            background: "#f6faf3",
+            input: "#595847",
+            ring: "#595847",
+            background: "#e7e6e0",
             foreground: "hsl(var(--foreground))",
             primary: {
-               DEFAULT: "#345427",
+               DEFAULT: "#595847",
                foreground: "hsl(var(--primary-foreground))",
             },
             secondary: {
@@ -47,7 +47,7 @@ module.exports = {
                foreground: "hsl(var(--card-foreground))",
             },
             custom: {
-               DEFAULT: "#e9f5e3",
+               DEFAULT: "#e7e6e0",
                foreground: "#B4D4FF",
             },
          },
