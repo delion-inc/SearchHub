@@ -21,20 +21,24 @@ public class Request {
     private Long id;
 
     @Column(name = "name", nullable = false)
-    String name;
+    private String name;
 
     @Column(name = "description", nullable = false)
-    String description;
+    private String description;
 
     @Column(name = "created_at", nullable = false)
-    String createdAt;
+    private String createdAt;
 
     @Column(name = "gender", nullable = false)
     @Enumerated(EnumType.STRING)
-    Gender gender;
+    private Gender gender;
 
     @Column(name = "location", nullable = false)
-    String location;
+    private String location;
+
+    @Lob
+    @Column(name = "image")
+    private byte[] image;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

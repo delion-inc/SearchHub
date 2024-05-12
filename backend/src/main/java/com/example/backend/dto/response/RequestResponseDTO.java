@@ -13,5 +13,6 @@ public class RequestResponseDTO {
     private String location;
     private Gender gender;
     private String createdAt;
+    private byte[] image;
     private UserDTO user;
 }

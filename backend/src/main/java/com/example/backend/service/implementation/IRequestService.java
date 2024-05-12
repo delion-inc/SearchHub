@@ -12,6 +12,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -29,16 +30,26 @@ public class IRequestService implements RequestService {
     private final UserRepository userRepository;
 
     @Override
-    public ResponseEntity<?> addRequest(RequestDTO requestDTO, String email) {
+    public ResponseEntity<?> addRequest(RequestDTO requestDTO, MultipartFile image, String email) {
+        if(requestDTO.getName() == null || requestDTO.getDescription() == null || requestDTO.getGender() == null || requestDTO.getLocation() == null) {
+            return new ResponseEntity<>("Please fill in all fields", HttpStatus.BAD_REQUEST);
+        }
         User user = userRepository.findByEmail(email);
-        Request request = Request.builder()
-                .name(requestDTO.getName())
-                .description(requestDTO.getDescription())
-                .createdAt(createTime())
-                .gender(requestDTO.getGender())
-                .location(requestDTO.getLocation())
-                .user(user)
-                .build();
+        Request request;
+        try {
+            request = Request.builder()
+                    .name(requestDTO.getName())
+                    .description(requestDTO.getDescription())
+                    .createdAt(createTime())
+                    .image(image.getBytes())
+                    .gender(requestDTO.getGender())
+                    .location(requestDTO.getLocation())
+                    .user(user)
+                    .build();
+        }
+        catch (Exception e) {
+            return new ResponseEntity<>("Error while saving request", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
         return new ResponseEntity<>(requestRepository.save(request), HttpStatus.CREATED);
     }
 
@@ -69,6 +80,7 @@ public class IRequestService implements RequestService {
         UserDTO userDTO = UserDTO.builder()
                 .email(request.getUser().getEmail())
                 .name(request.getUser().getName())
+                .surname(request.getUser().getSurname())
                 .phone(request.getUser().getPhone())
                 .build();
         RequestResponseDTO requestResponseDTO = RequestResponseDTO.builder()
@@ -78,6 +90,7 @@ public class IRequestService implements RequestService {
                 .description(request.getDescription())
                 .gender(request.getGender())
                 .location(request.getLocation())
+                .image(request.getImage())
                 .user(userDTO)
                 .build();
         return requestResponseDTO;

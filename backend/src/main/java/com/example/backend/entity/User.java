@@ -24,23 +24,23 @@ public class User {
     private Long id;
 
     @Column(name = "name", nullable = false)
-    String name;
+    private String name;
 
     @Column(name = "surname", nullable = false)
-    String surname;
+    private String surname;
 
     @Column(name = "email", nullable = false)
-    String email;
+    private String email;
 
     @Column(name = "password", nullable = false)
-    String password;
+    private String password;
 
     @Column(name = "phone", nullable = false)
-    String phone;
+    private String phone;
 
     @OneToMany(mappedBy = "user")
     @JsonIgnore
-    List<Request> requests;
+    private List<Request> requests;
 
     @Column(name = "refresh_token")
     private String refreshToken;
