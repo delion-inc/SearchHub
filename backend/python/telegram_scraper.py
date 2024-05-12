@@ -30,7 +30,7 @@ def process_channel(client, channel_name, pattern):
 
 def job():
     new_names = []
-    with TelegramClient('anon', api_id, api_hash, bot_token=bot_token) as client:
+    with TelegramClient('anon', api_id, api_hash) as client:
         new_names.extend(process_channel(client, 'poschukUA', r'🇺🇦 (.*?) (?:\d{4} р\.н\.|#)'))
         new_names.extend(process_channel(client, 'poshuk_znyklyh', r'ПІБ: (.*?) \nДата народження'))
         new_names.extend(process_channel(client, 'WagnerPlennyeVSU', r'📝 (.*?),'))

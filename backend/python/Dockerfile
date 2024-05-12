@@ -1,14 +1,16 @@
-# Використовуйте офіційний образ Python з Docker Hub
+# Використовуйте офіційний образ Python як батьківський образ
 FROM python:3.8-slim-buster
 
 # Встановіть робочий каталог у контейнері
 WORKDIR /app
 
-# Копіюйте файли з поточного каталогу у контейнер
+# Копіюйте поточний каталог в робочий каталог у контейнері
 COPY . .
 
-# Встановіть необхідні залежності
-RUN pip install --no-cache-dir telethon schedule flask
+# Встановіть будь-які необхідні пакети, вказані в requirements.txt
+RUN pip install telethon schedule flask
 
-# Запустіть ваш код
-CMD [ "python", "./telegram_scraper.py" ]
+# Запустіть app.py, коли контейнер запускається
+CMD ["python", "app.py"]
+
+
