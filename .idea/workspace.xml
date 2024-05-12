@@ -7,7 +7,33 @@
     <list default="true" id="ce0e8348-ff2a-47bc-a5d5-31e987fb5049" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/python/anon.session" beforeDir="false" afterPath="$PROJECT_DIR$/backend/python/anon.session" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/python/telegram_scraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/python/telegram_scraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/surefire-reports/TEST-com.example.backend.BackendApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/surefire-reports/TEST-com.example.backend.BackendApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/surefire-reports/com.example.backend.BackendApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/surefire-reports/com.example.backend.BackendApplicationTests.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/request/AuthRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/request/AuthRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/request/RequestDTO$RequestDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/request/RequestDTO$RequestDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/request/RequestDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/request/RequestDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/CommentDTO$CommentDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/CommentDTO$CommentDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/CommentDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/CommentDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/RequestResponseDTO$RequestResponseDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/RequestResponseDTO$RequestResponseDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/RequestResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/RequestResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO$UserDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO$UserDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request$RequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request$RequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/constant/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/constant/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/JwtTokenFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/JwtTokenFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/JwtTokenService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/JwtTokenService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IRequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IRequestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IUserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +160,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Python.telegram_scraper">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.backend.telegram.Main" />
       <module name="backend" />
