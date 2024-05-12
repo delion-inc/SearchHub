@@ -23,4 +23,17 @@ export interface IRequest {
       phone: string;
       email: string;
    };
+   comments: IComment[];
+}
+
+export interface IComment {
+   id: number;
+   text: string;
+   createdAt: string;
+   user: {
+      name: string;
+      surname: string;
+      email: string;
+      phone: string;
+   };
 }

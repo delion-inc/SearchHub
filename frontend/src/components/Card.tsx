@@ -9,13 +9,13 @@ const Card = ({ ...request }: IRequest) => {
    const navigate = useNavigate();
    
    return (
-      <CardWrapper className="bg-background"> 
-            <CardDescription className="flex gap-x-5 p-5">
+      <CardWrapper className="bg-background p-5"> 
+            <CardDescription className="flex gap-x-5 sm:items-center max-sm:flex-col">
                <p>
-                  <img className="max-w-[150px] object-cover" src={`data:image/webp;base64,${request.image}`} alt="Фото" />
+                  <img className="max-w-[150px] object-cover max-sm:mb-5" src={`data:image/webp;base64,${request.image}`} alt="Фото" />
                </p>
                <p>
-                  <h1 className="text-black text-2xl font-bold">{request.name}</h1>
+                  <p className="text-black text-2xl font-bold">{request.name}</p>
                   <br />
                   <p className="mb-5">{request.description}</p>
                   {request.info && (
@@ -38,7 +38,7 @@ const Card = ({ ...request }: IRequest) => {
                   </p>
                </p>
             </CardDescription> 
-         <CardFooter className="flex items-center justify-between">
+         <CardFooter className="flex items-center justify-between p-0 mt-5">
             <p className="text-muted-foreground">{formatDate(request.createdAt)}</p>
             <Button onClick={() => navigate(`/request/${request.id}`)}>Детальніше</Button>
          </CardFooter>

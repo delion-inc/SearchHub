@@ -45,7 +45,6 @@ def job():
 job()
 
 schedule.every(1).hours.do(job)
-# schedule.every(25).seconds.do(job)
 
 app = Flask(__name__)
 

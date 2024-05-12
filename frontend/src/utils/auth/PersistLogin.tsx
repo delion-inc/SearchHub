@@ -6,7 +6,6 @@ import { setCredentials } from "@/app//redux/slices/authSlice";
 import { useRefreshMutation } from "@/api/endpoints/auth/refresh.api";
 import { useAppDispatch } from "@/app/redux/store";
 import { selectCurrentToken } from "@/app/redux/selectors";
-import { Loader2 } from "lucide-react";
 
 const PersistLogin = () => {
    const [isLoading, setIsLoading] = useState(true);
@@ -47,7 +46,19 @@ const PersistLogin = () => {
    //    // console.log(`aT: ${JSON.stringify(token)}`);
    //    // eslint-disable-next-line react-hooks/exhaustive-deps
    // }, [isLoading]);
-   return <>{!persist ? <Outlet /> : isLoading ? <Loader2 color="#176B87" className="absolute top-[45%] left-[49%] h-10 w-10 animate-spin" /> : <Outlet />}</>;
+   return (
+      <>
+         {!persist ? (
+            <Outlet />
+         ) : isLoading ? (
+            <div className="mt-[90px] max-w-[750px] mx-auto space-y-10">
+               <p className="mt-[200px] text-center text-background">Завантаження...</p>
+            </div>
+         ) : (
+            <Outlet />
+         )}
+      </>
+   );
 };
 
 export default PersistLogin;
