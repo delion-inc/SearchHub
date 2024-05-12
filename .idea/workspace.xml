@@ -283,4 +283,7 @@
     <expand />
     <select />
   </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SearchHub$telegram_scraper.coverage" NAME="telegram_scraper Coverage Results" MODIFIED="1715483483367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/backend/python" />
+  </component>
 </project>
