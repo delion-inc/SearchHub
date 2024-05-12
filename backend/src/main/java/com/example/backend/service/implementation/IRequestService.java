@@ -1,17 +1,28 @@
 package com.example.backend.service.implementation;
 
 import com.example.backend.dto.request.RequestDTO;
+import com.example.backend.dto.response.CommentDTO;
 import com.example.backend.dto.response.RequestResponseDTO;
 import com.example.backend.dto.response.UserDTO;
+import com.example.backend.entity.Comment;
 import com.example.backend.entity.Request;
 import com.example.backend.entity.User;
+import com.example.backend.repository.CommentRepository;
 import com.example.backend.repository.RequestRepository;
 import com.example.backend.repository.UserRepository;
 import com.example.backend.service.RequestService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.time.ZoneId;
@@ -19,6 +30,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Service
 @RequiredArgsConstructor
@@ -28,6 +40,11 @@ public class IRequestService implements RequestService {
     private static final String DATA_TIME_FORMAT = "yyyy-MM-dd HH:mm:ss";
     private final RequestRepository requestRepository;
     private final UserRepository userRepository;
+    private final CommentRepository commentRepository;
+    private final RestTemplate restTemplate;
+
+    @Value("${address.python.service}")
+    private String adress;
 
     @Override
     public ResponseEntity<?> addRequest(RequestDTO requestDTO, MultipartFile image, String email) {
@@ -76,7 +93,7 @@ public class IRequestService implements RequestService {
         return new ResponseEntity<>(requestResponseDTOList, HttpStatus.OK);
     }
 
-    private static RequestResponseDTO getRequestResponseDTO(Request request) {
+    private RequestResponseDTO getRequestResponseDTO(Request request) {
         UserDTO userDTO = UserDTO.builder()
                 .email(request.getUser().getEmail())
                 .name(request.getUser().getName())
@@ -91,8 +108,52 @@ public class IRequestService implements RequestService {
                 .gender(request.getGender())
                 .location(request.getLocation())
                 .image(request.getImage())
+                .info(createRequestResponseDTO(request.getName()).getBody())
                 .user(userDTO)
+                .comments(mappedComments(request.getId(), userDTO))
                 .build();
         return requestResponseDTO;
     }
+
+    private List<CommentDTO> mappedComments(Long id, UserDTO userDTO) {
+        List<Comment> commentList = commentRepository.findByRequestId(id);
+        List<CommentDTO> commentDTOList = new ArrayList<>();
+        for (Comment comment : commentList) {
+            CommentDTO commentDTO = CommentDTO.builder()
+                    .id(comment.getId())
+                    .text(comment.getText())
+                    .createdAt(comment.getCreatedAt())
+                    .user(UserDTO.builder()
+                            .email(userDTO.getEmail())
+                            .name(userDTO.getName())
+                            .surname(userDTO.getSurname())
+                            .phone(userDTO.getPhone())
+                            .build())
+                    .build();
+            commentDTOList.add(commentDTO);
+        }
+        return commentDTOList;
+    }
+
+    private ResponseEntity<String> createRequestResponseDTO(String name) {
+        String url = "http://" + adress + ":8081/api/v1/search/" + name;
+        String urlResponse = "";
+        try {
+            ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, null, String.class);
+            if (response.getStatusCode() == HttpStatus.OK) {
+                String responseBody = response.getBody();
+                ObjectMapper mapper = new ObjectMapper();
+                JsonNode node = mapper.readTree(responseBody);
+                urlResponse = node.get("url").asText();
+            }
+            return new ResponseEntity<>(urlResponse, HttpStatus.OK);
+        } catch (HttpClientErrorException.NotFound e) {
+            return new ResponseEntity<>(null, HttpStatus.NOT_FOUND);
+        } catch (JsonMappingException e) {
+            throw new RuntimeException(e);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }
