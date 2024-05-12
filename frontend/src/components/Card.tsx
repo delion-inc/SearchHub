@@ -15,7 +15,7 @@ const Card = ({ ...request }: IRequest) => {
                   <img className="max-w-[150px] object-cover" src={`data:image/webp;base64,${request.image}`} alt="Фото" />
                </p>
                <p>
-                  <h1 className="text-black text-2xl font-bold">{request.name}</h1>
+                  <p className="text-black text-2xl font-bold">{request.name}</p>
                   <br />
                   <p className="mb-5">{request.description}</p>
                   {request.info && (
