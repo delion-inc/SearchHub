@@ -19,7 +19,7 @@ const AddRequestForm: React.FC<RegisterFormProps> = ({ form, onSubmit }) => {
                <div className="flex flex-col space-y-1.5">
                   
                   <div>
-                     <InputField<RequestFormData> control={form.control} name="name" label="Заголовок" type="text" placeholder="Короткий заголовок" />
+                     <InputField<RequestFormData> control={form.control} name="name" label="Ім'я та прізвище" type="text" placeholder="Введіть ім'я та прізвище" />
                   </div>
                   <div>
                      <InputField<RequestFormData>
