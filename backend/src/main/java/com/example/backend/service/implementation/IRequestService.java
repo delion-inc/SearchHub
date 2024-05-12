@@ -108,7 +108,8 @@ public class IRequestService implements RequestService {
                 .gender(request.getGender())
                 .location(request.getLocation())
                 .image(request.getImage())
-                .info(createRequestResponseDTO(request.getName()).getBody())
+                .info(null)
+//                .info(createRequestResponseDTO(request.getName()).getBody())
                 .user(userDTO)
                 .comments(mappedComments(request.getId(), userDTO))
                 .build();
