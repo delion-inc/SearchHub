@@ -1,42 +1,36 @@
 import { Button } from "@/app/styles/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/app/styles/ui/card";
-import { RegisterFormData } from "@/types/auth.interface";
-import { RegisterSchema } from "@/utils/schema";
+import { LoginFormData } from "@/types/auth.interface";
+import { LoginSchema  } from "@/utils/schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { UseFormReturn, useForm } from "react-hook-form";
-import RegistrationForm from "./RegistrationForm";
-import { useRegisterMutation } from "@/api";
+import { useLoginMutation } from "@/api";
 import { z } from "zod";
 import { Toaster, toast } from "sonner";
-import { ButtonLoading } from "./ButtonLoading";
 import { Link, useNavigate } from "react-router-dom";
 import { setCredentials, useAppDispatch } from "@/app/redux";
+import { ButtonLoading } from "@/components/ButtonLoading";
+import LoginForm from "@/components/LoginForm";
 
-const Register = () => {
-   const form: UseFormReturn<RegisterFormData> = useForm<RegisterFormData>({
-      resolver: zodResolver(RegisterSchema),
+const Login = () => {
+   const form: UseFormReturn<LoginFormData> = useForm<LoginFormData>({
+      resolver: zodResolver(LoginSchema),
       defaultValues: {
-         name: "",
-         surname: "",
          email: "",
-         phone: "",
          password: "",
-         confirmPassword: ""
       },
    });
 
-   const [register, {isLoading}] = useRegisterMutation();
-   const navigate = useNavigate();
+   const [login, {isLoading}] = useLoginMutation();
    const dispatch = useAppDispatch();
+   const navigate = useNavigate();
 
-   async function onSubmit(data: z.infer<typeof RegisterSchema>) {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { confirmPassword, ...dataToSend } = data;
+   async function onSubmit(data: z.infer<typeof LoginSchema>) {
       try {
-         const userData = await register(dataToSend as Partial<RegisterFormData>).unwrap();
-         toast("Реєстрація виконана успішно"); 
+         const userData = await login(data).unwrap();
+         // const userData = {accessToken: "1", roles: [2001]}
          dispatch(setCredentials({ ...userData }));
-         navigate("/"); 
+         navigate("/");
          // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
          if (!err?.originalStatus) {
@@ -44,7 +38,7 @@ const Register = () => {
          } else if (err.originalStatus === 400) {
             toast("Будь ласка, заповніть всі поля");
          } else if (err.originalStatus === 401) {
-            toast("Такий користувач вже зареєстрований");
+            toast("Неправильний логін або пароль");
          } else {
             toast("Виникла помилка( Спробуйте пізніше");
          }
@@ -52,21 +46,21 @@ const Register = () => {
    }
 
    return (
-      <div className="m-auto py-20">
-         <Card className="bg-custom max-w-2xl m-auto">
+      <div className="m-auto py-[100px]">
+         <Card className="bg-card max-w-2xl m-auto sm:mt-20 mt-10">
             <CardHeader>
-               <CardTitle>Реєстрація</CardTitle>
-               <CardDescription>Зареєструйтесь на сайті, щоб мати змогу переглядати оголошення про зниклих безвісти та робити запити.</CardDescription>
+               <CardTitle>Вхід</CardTitle>
+               <CardDescription>Увійдіть на сайт, щоб мати змогу переглядати оголошення про зниклих безвісти та робити запити.</CardDescription>
             </CardHeader>
             <CardContent> 
-               <RegistrationForm form={form} onSubmit={onSubmit} />
+               <LoginForm form={form} onSubmit={onSubmit} />
             </CardContent>
             <CardFooter className="grid">
                {isLoading ? (
                   <ButtonLoading />
                ) : (
                   <Button form="register-form" type="submit" className="w-full">
-                     Зареєструватись
+                     Увійти
                   </Button>
                )}
                <Button 
@@ -74,7 +68,7 @@ const Register = () => {
                   variant="link"
                   className="mx-auto" 
                >
-                  <Link to="/login">Увійти</Link>
+                  <Link to="/registration">Зареєструватись</Link>
                </Button>
             </CardFooter>
          </Card>
@@ -83,4 +77,4 @@ const Register = () => {
    );
 };
 
-export default Register;
+export default Login;
