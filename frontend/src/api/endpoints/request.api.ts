@@ -26,7 +26,7 @@ export const requestSlice = api.injectEndpoints({
       }),
       getRequest: builder.query<IRequest, number>({
          query: (id) => `/api/v1/request/get/${id}`,
-         providesTags: ['Request'],
+         providesTags: ['Request', "Comments"],
       }),
    }),
 });

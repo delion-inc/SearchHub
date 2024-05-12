@@ -26,7 +26,7 @@ const AppRouter = () => {
                   <Route path="/" element={<Home />} />
                </Route> 
                <Route element={<RequireAuth allowedRoles={[Role.User]} />}>
-                  <Route path="/request:id" element={<Request />} />
+                  <Route path="/request/:id" element={<Request />} />
                </Route> 
             </Route>
 

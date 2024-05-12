@@ -4,7 +4,7 @@ import { baseQueryWithReAuth } from "@/api/baseQuery";
 const api = createApi({
    baseQuery: baseQueryWithReAuth,
    endpoints: () => ({}),
-   tagTypes: ["Request"],
+   tagTypes: ["Request", "Comments"],
 });
 
 export default api;
