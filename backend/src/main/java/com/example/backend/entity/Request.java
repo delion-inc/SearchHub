@@ -1,11 +1,14 @@
 package com.example.backend.entity;
 
 import com.example.backend.entity.constant.Gender;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 
 @Data
@@ -21,21 +24,30 @@ public class Request {
     private Long id;
 
     @Column(name = "name", nullable = false)
-    String name;
+    private String name;
 
     @Column(name = "description", nullable = false)
-    String description;
+    private String description;
 
     @Column(name = "created_at", nullable = false)
-    String createdAt;
+    private String createdAt;
 
     @Column(name = "gender", nullable = false)
-    Gender gender;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
 
     @Column(name = "location", nullable = false)
-    String location;
+    private String location;
+
+    @Lob
+    @Column(name = "image")
+    private byte[] image;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
+
+    @OneToMany(mappedBy = "request")
+    @JsonIgnore
+    private List<Comment> comments;
 }

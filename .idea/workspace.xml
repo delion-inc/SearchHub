@@ -6,16 +6,31 @@
   <component name="ChangeListManager">
     <list default="true" id="ce0e8348-ff2a-47bc-a5d5-31e987fb5049" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/dto/response/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/dto/response/UserDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/dto/response/RequestResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/dto/response/RequestResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/entity/Request.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/repository/RequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/repository/RequestRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/implementation/IRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/example/backend/service/implementation/IRequestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/controller/RequestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/controller/RequestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO$UserDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO$UserDTOBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/UserDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/repository/RequestRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/repository/RequestRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/backend-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/backend/dto/response/RequestResponseDTO$RequestResponseDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/backend/dto/response/RequestResponseDTO$RequestResponseDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/backend/dto/response/RequestResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/backend/dto/response/RequestResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/backend/entity/Request$RequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/backend/entity/Request$RequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/backend/entity/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/backend/entity/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/backend/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/backend/security/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/example/backend/service/implementation/IRequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/classes/com/example/backend/service/implementation/IRequestService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/surefire-reports/TEST-com.example.backend.BackendApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/surefire-reports/TEST-com.example.backend.BackendApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/surefire-reports/com.example.backend.BackendApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/target/surefire-reports/com.example.backend.BackendApplicationTests.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/RequestResponseDTO$RequestResponseDTOBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/RequestResponseDTO$RequestResponseDTOBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/RequestResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/dto/response/RequestResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request$RequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request$RequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/entity/Request.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/security/SecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/RequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/RequestService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IRequestService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/backend/com/example/backend/service/implementation/IRequestService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +41,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -52,6 +67,10 @@
     &quot;accountId&quot;: &quot;f82342fc-28e8-4a25-b990-a5cf7a4fe9e4&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -72,9 +91,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "Maven.backend [clean].executor": "Run",
     "Maven.backend [compile].executor": "Run",
     "Maven.backend [install].executor": "Run",
+    "Maven.backend [package].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -94,6 +115,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -116,7 +138,21 @@
       <recent name="com.example.backend.service" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.BackendApplication">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.backend.telegram.Main" />
+      <module name="backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.backend.telegram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="SearchHub" />
       <working_directory value="$PROJECT_DIR$" />
@@ -159,6 +195,11 @@
         <option name="com.soywiz.korge.intellij.UpdateResourceBeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -171,7 +212,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4f4e9e74-3541-498f-84a7-6258803a9775" name="Changes" comment="" />
+      <changelist id="ce0e8348-ff2a-47bc-a5d5-31e987fb5049" name="Changes" comment="" />
       <created>1715426449356</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -180,6 +221,7 @@
       <workItem from="1715427018191" duration="100000" />
       <workItem from="1715427134145" duration="120000" />
       <workItem from="1715427270095" duration="92000" />
+      <workItem from="1715470191269" duration="8222000" />
     </task>
     <servers />
   </component>
@@ -188,5 +230,9 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

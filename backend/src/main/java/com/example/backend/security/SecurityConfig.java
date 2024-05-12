@@ -15,6 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.reactive.CorsWebFilter;
@@ -26,6 +27,7 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
+//@EnableMethodSecurity(jsr250Enabled = true)
 public class SecurityConfig {
 
     private final JwtTokenFilter jwtRequestFilter;
@@ -36,15 +38,21 @@ public class SecurityConfig {
     }
 
     @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
+    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(c -> c.configurationSource(corsConfigurationSource()))
                 .authorizeHttpRequests(authorizeRequests ->
-                        authorizeRequests
-                                .requestMatchers("/api/v1/request/**").hasAnyRole("USER", "ADMIN")
+                                authorizeRequests
+                                        .requestMatchers("/api/v1/request/**").hasAnyRole("USER", "ADMIN")
+                                        .requestMatchers("/api/v1/comment/**").hasAnyRole("USER", "ADMIN")
 //                                .requestMatchers("/api/v1/request/get/").hasAnyRole("USER", "ADMIN")
-                                .requestMatchers("/api/v1/user/**").permitAll()
+                                        .requestMatchers("/api/v1/user/**").permitAll()
                 )
                 .sessionManagement(c -> c.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .exceptionHandling(c -> c.authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED)))
@@ -55,7 +63,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:5173", "http://frontend:4173", "http://26.82.111.77:5173", "http://26.82.111.77:4173"));
+        configuration.setAllowedOrigins(List.of("http://localhost:4173","http://localhost:5173", "http://frontend:4173", "http://26.82.111.77:5173", "http://26.82.111.77:4173"));
         configuration.setAllowedMethods(Arrays.asList("GET","POST", "PUT", "DELETE"));
         configuration.setAllowCredentials(true);
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
