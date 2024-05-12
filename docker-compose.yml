@@ -17,6 +17,11 @@ services:
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: 12345
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.postgresql.Driver
+  python-app:
+    build: ./backend/python
+    volumes:
+      - ./backend/python:/app
+    command: python telegram_scraper.py
   frontend:
     build: ./frontend
     ports:
