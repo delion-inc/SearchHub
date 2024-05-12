@@ -12,7 +12,7 @@ const RequireAuth: FC<{ allowedRoles: number[] }> = ({ allowedRoles }) => {
    return (
       <>
          {!auth.accessToken ? (
-            <Navigate to="/welcome" state={{ from: location }} replace />
+            <Navigate to="/registration" state={{ from: location }} replace />
          ) : !auth.roles ? (
             <Navigate to="/unauthorized" state={{ from: location }} replace />
          ) : auth?.roles?.find((role) => allowedRoles?.includes(role)) ? (
@@ -20,7 +20,7 @@ const RequireAuth: FC<{ allowedRoles: number[] }> = ({ allowedRoles }) => {
          ) : auth?.accessToken ? (
             <Navigate to="/unauthorized" state={{ from: location }} replace />
          ) : (
-            <Navigate to="/welcome" state={{ from: location }} replace />
+            <Navigate to="/registration" state={{ from: location }} replace />
          )}
       </>
    );

@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "@/app/appLayout";
 import Home from "@/pages/Home";
 import PersistLogin from "@/utils/auth/PersistLogin";
-import Hero from "@/components/Hero";
 import RequireAuth from "@/utils/auth/RequireAuth";
 import Login from "@/pages/Login";
 import Register from "@/pages/Register";
@@ -17,7 +16,6 @@ const AppRouter = () => {
       <Routes>
          <Route path="/" element={<Layout />}>
             {/* Public routes */} 
-               <Route path="welcome" element={<Hero />} /> 
                <Route path="login" element={<Login />} /> 
                <Route path="registration" element={<Register />} /> 
             <Route element={<PersistLogin />}>
