@@ -10,12 +10,14 @@ type RegisterFormProps = {
    onSubmit: SubmitHandler<RequestFormData>;
 };
 
-const AddRequestForm: React.FC<RegisterFormProps> = ({ form, onSubmit }) => {
+const AddRequestForm: React.FC<RegisterFormProps> = ({ form, onSubmit }) => { 
+
    return (
       <Form {...form}>
          <form id="request-form" onSubmit={form.handleSubmit(onSubmit)}>
             <div className="grid w-full items-center gap-4">
                <div className="flex flex-col space-y-1.5">
+                  
                   <div>
                      <InputField<RequestFormData> control={form.control} name="name" label="Заголовок" type="text" placeholder="Короткий заголовок" />
                   </div>
@@ -55,8 +57,8 @@ const AddRequestForm: React.FC<RegisterFormProps> = ({ form, onSubmit }) => {
                         render={({ field }) => (
                            <FormItem>
                               <FormLabel>Стать</FormLabel>
-                              <Select onValueChange={field.onChange} >
-                                 <FormControl >
+                              <Select onValueChange={field.onChange}>
+                                 <FormControl>
                                     <SelectTrigger>
                                        <SelectValue placeholder="Оберіть стать зниклої людини." />
                                     </SelectTrigger>

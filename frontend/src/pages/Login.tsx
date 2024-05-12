@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { UseFormReturn, useForm } from "react-hook-form";
 import { useLoginMutation } from "@/api";
 import { z } from "zod";
-import { toast } from "sonner";
+import { Toaster, toast } from "sonner";
 import { Link, useNavigate } from "react-router-dom";
 import { setCredentials, useAppDispatch } from "@/app/redux";
 import { ButtonLoading } from "@/components/ButtonLoading";
@@ -72,6 +72,7 @@ const Login = () => {
                </Button>
             </CardFooter>
          </Card>
+         <Toaster />
       </div>
    );
 };

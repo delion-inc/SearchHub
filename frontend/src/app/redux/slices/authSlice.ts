@@ -22,7 +22,7 @@ const authSlice = createSlice({
       logOut: (state) => {
          state.roles = [];
          state.accessToken = null;
-      },
+      }, 
    },
 });
 
