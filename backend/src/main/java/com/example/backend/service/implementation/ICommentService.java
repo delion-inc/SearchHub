@@ -28,10 +28,10 @@ public class ICommentService implements CommentService {
     private final UserRepository userRepository;
 
     @Override
-    public ResponseEntity<?> addComment(Comment comment, Long id, String name) {
+    public Comment addComment(Comment comment, Long id, String name) {
         comment.setCreatedAt(createTime());
         comment.setRequest(requestRepository.findById(id).get());
-        return new ResponseEntity<>(commentRepository.save(comment), HttpStatus.CREATED);
+        return commentRepository.save(comment);
     }
 
     private String createTime() {

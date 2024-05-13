@@ -27,7 +27,6 @@ def process_channel(client, channel_name, pattern):
         date_to_start = message.date
     return new_names
 
-
 def job():
     new_names = []
     with TelegramClient('anon', api_id, api_hash) as client:
