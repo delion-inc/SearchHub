@@ -13,9 +13,9 @@ services:
     ports:
       - 8080:8080
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://db-postgresql-fra1-32077-roma-do-user-15908868-0.c.db.ondigitalocean.com:25060/task
-      SPRING_DATASOURCE_USERNAME: doadmin
-      SPRING_DATASOURCE_PASSWORD: AVNS_eHLE9F3tZs3hk16V0ZT
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/hackathon
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 12345
       SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.postgresql.Driver
   python-app:
     build: ./backend/python
