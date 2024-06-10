@@ -6,5 +6,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface CommentService {
-    Comment addComment(Comment comment, Long id, String name);
+    Comment addComment(Comment comment, Long id);
 }

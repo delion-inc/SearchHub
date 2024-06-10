@@ -1,10 +1,12 @@
 package com.example.backend.controller;
 
 import com.example.backend.dto.request.RequestDTO;
+import com.example.backend.dto.response.RequestResponseDTO;
 import com.example.backend.entity.Request;
 import com.example.backend.entity.constant.Gender;
 import com.example.backend.service.RequestService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -34,16 +36,29 @@ public class RequestController {
                 .location(location)
                 .gender(gender)
                 .build();
-        return requestService.addRequest(request, image, principal.getName());
+        try {
+            Request requestEntity = requestService.addRequest(request, image, principal.getName());
+            return new ResponseEntity<>(requestEntity, HttpStatus.CREATED);
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+        } catch (RuntimeException e) {
+            return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @GetMapping("/get/{id}")
     public ResponseEntity<?> getRequestById(@PathVariable Long id) {
-        return requestService.getRequestById(id);
+        try {
+            RequestResponseDTO requestResponseDTO = requestService.getRequestById(id);
+            return new ResponseEntity<>(requestResponseDTO, HttpStatus.OK);
+        } catch (IllegalArgumentException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     @GetMapping("/get-all")
     public ResponseEntity<?> getAllRequest() {
-        return requestService.getAll();
+        List<RequestResponseDTO> requestResponseDTOList = requestService.getAll();
+        return new ResponseEntity<>(requestResponseDTOList, HttpStatus.OK);
     }
 }

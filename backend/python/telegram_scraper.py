@@ -1,7 +1,7 @@
+import schedule
 from telethon.sync import TelegramClient
 import re
 from datetime import datetime
-import schedule
 import time
 from flask import Flask, request, jsonify
 import os
@@ -43,7 +43,7 @@ def job():
 
 job()
 
-schedule.every(1).hours.do(job)
+# schedule.every(1).hours.do(job)
 
 app = Flask(__name__)
 

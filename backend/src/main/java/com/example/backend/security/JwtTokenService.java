@@ -1,7 +1,6 @@
 package com.example.backend.security;
 
 import com.example.backend.entity.constant.Role;
-import org.springframework.stereotype.Service;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -9,6 +8,8 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Service;
+
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
@@ -19,6 +20,9 @@ import java.util.stream.Collectors;
 
 @Service
 public class JwtTokenService {
+
+    private static final String JWT_TYPE = "JWT";
+    private static final String SIGNING_ALGORITHM = "HS256";
 
     @Value("${jwt.secret}")
     private String secret;
@@ -60,8 +64,8 @@ public class JwtTokenService {
 
     private Map<String, Object> createJwtHeader() {
         Map<String, Object> header = new ConcurrentHashMap<>();
-        header.put("typ", "JWT");
-        header.put("alg", "HS256");
+        header.put("typ", JWT_TYPE);
+        header.put("alg", SIGNING_ALGORITHM);
         return header;
     }
 

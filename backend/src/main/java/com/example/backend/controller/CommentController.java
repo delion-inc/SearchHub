@@ -22,7 +22,7 @@ public class CommentController {
     private final CommentService commentService;
 
     @PostMapping("/add/{id}")
-    public ResponseEntity<?> addRequest (@RequestBody Comment comment,@PathVariable Long id, Principal principal) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(commentService.addComment(comment, id, principal.getName()));
+    public ResponseEntity<?> addRequest (@RequestBody Comment comment,@PathVariable Long id) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(commentService.addComment(comment, id));
     }
 }

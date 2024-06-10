@@ -3,11 +3,13 @@ package com.example.backend.controller;
 import com.example.backend.dto.request.AuthRequest;
 import com.example.backend.entity.User;
 import com.example.backend.service.UserService;
-import jakarta.annotation.security.RolesAllowed;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Map;
 
 @RestController
 @CrossOrigin
@@ -18,26 +20,42 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/registration")
-//    @RolesAllowed("ROLE_USER")
-    public ResponseEntity<?> registrationRecipient(@RequestBody User user, HttpServletResponse response) {
-        return userService.registration(user, response);
+    public ResponseEntity<?> registerUser(@RequestBody User user, HttpServletResponse response) {
+        try {
+            Map<String, Object> responseBody = userService.registration(user, response);
+            return ResponseEntity.ok(responseBody);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @PostMapping("/authorization")
-//    @RolesAllowed("ROLE_USER")
-    public ResponseEntity<?> authorization(@RequestBody AuthRequest authRequest, HttpServletResponse response) {
-        return userService.authorization(authRequest, response);
+    public ResponseEntity<?> authorizeUser(@RequestBody AuthRequest authRequest, HttpServletResponse response) {
+        try {
+            Map<String, Object> responseBody = userService.authorization(authRequest, response);
+            return ResponseEntity.ok(responseBody);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
+        }
     }
 
     @PostMapping("/refresh")
-//    @RolesAllowed("ROLE_USER")
     public ResponseEntity<?> refreshAuthToken(@CookieValue("jwt") String refreshToken, HttpServletResponse response) {
-        return userService.refreshAuthToken(refreshToken, response);
+        try {
+            Map<String, Object> responseBody = userService.refreshAuthToken(refreshToken, response);
+            return ResponseEntity.ok(responseBody);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @PostMapping("/logout")
-//    @RolesAllowed("ROLE_USER")
-    public ResponseEntity<?> logout(@CookieValue("jwt") String refreshToken, HttpServletResponse response) {
-        return userService.logout(refreshToken, response);
+    public ResponseEntity<?> logoutUser(@CookieValue("jwt") String refreshToken, HttpServletResponse response) {
+        try {
+            userService.logout(refreshToken, response);
+            return ResponseEntity.noContent().build();
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 }

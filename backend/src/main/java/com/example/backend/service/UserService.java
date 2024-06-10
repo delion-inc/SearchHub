@@ -1,3 +1,4 @@
+
 package com.example.backend.service;
 
 import com.example.backend.dto.request.AuthRequest;
@@ -6,14 +7,17 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 @Service
 public interface UserService {
 
-    ResponseEntity<?> registration(User user, HttpServletResponse response);
+    Map<String, Object> registration(User user, HttpServletResponse response);
 
-    ResponseEntity<?> authorization(AuthRequest authRequest, HttpServletResponse response);
+    Map<String, Object> authorization(AuthRequest authRequest, HttpServletResponse response);
 
-    ResponseEntity<?> refreshAuthToken(String refreshToken, HttpServletResponse response);
+    Map<String, Object> refreshAuthToken(String refreshToken, HttpServletResponse response);
 
-    ResponseEntity<?> logout(String refreshToken, HttpServletResponse response);
+    void logout(String refreshToken, HttpServletResponse response);
 }
+
